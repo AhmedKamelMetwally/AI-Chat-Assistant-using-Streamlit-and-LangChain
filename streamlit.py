@@ -3,7 +3,7 @@ from langchain import HuggingFaceHub
 import streamlit as st
 from langchain.callbacks import StreamlitCallbackHandler
 import os
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = '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'
+
 def agent_load()->AgentExecutor:
     llm = HuggingFaceHub(repo_id="t5-small",
 model_kwargs={"temperature":0, "max_length":180})
